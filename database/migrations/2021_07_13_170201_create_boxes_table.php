@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTravelBoxesTable extends Migration
+class CreateBoxesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateTravelBoxesTable extends Migration
      */
     public function up()
     {
-        Schema::create('travel_boxes', function (Blueprint $table) {
+        Schema::create('boxes', function (Blueprint $table) {
             $table->id();
-            $table->varchar('brand', 30);
-            $table->varchar('place', 50);
-            $table->varchar('duration', 10);
+            $table->string('brand', 30);
+            $table->string('place', 50);
+            $table->string('duration', 10);
             $table->text('offer');
             $table->string('poster')->nullable();
             $table->decimal('price');
@@ -32,6 +32,6 @@ class CreateTravelBoxesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('travel_boxes');
+        Schema::dropIfExists('boxes');
     }
 }
