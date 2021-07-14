@@ -2,17 +2,25 @@
     width: 400px;
     height: 400px;
     background-color: palegreen;
+    color: white;
     margin: 35px;
     position: relative;
-    border-radius: 15px;
     
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.7);
+    }
+
     h2{
         position: absolute;
         top:10px;
         left: 10px;
     }
 
-    >h3{
+    >h3{ 
+        font-size: 40px;
         position: absolute;
         top: 40%;
         left: 50%;
@@ -25,16 +33,15 @@
         position: absolute;
         bottom: 112px;
         left: 25%;
-        transform: translateX;
-        transform: translate;
         background-color: white;
+        color: black;
         padding: 0.5rem 0.3rem;
     }
 
     .description{
         position: absolute;
         bottom: 0;
-        background-color: paleturquoise;
+        background-color: rgb(59, 92, 201);
         padding: 20px;
         display: flex;
         >div{
@@ -43,7 +50,8 @@
         >span{
             width: 20%;
             align-self: flex-end;
-            text-align: end;
+            text-align: center;
+        
         }
     }
 }
